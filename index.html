@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walimatul Khitan - Sultan Maulana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #f5f5f5 0%, #c1e9fb 50%, #a5dffa 100%);
+      }
+      .glass-effect {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .animate-pulse-slow {
+        animation: pulse 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+      .moroccan-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20s-20-8.954-20-20 8.954-20 20-20 20 8.954 20 20zm-1.5 0c0-10.237-8.263-18.5-18.5-18.5S-18.5 9.763-18.5 20 -10.237 38.5 0 38.5 18.5 30.237 18.5 20z'/%3E%3C/g%3E%3C/svg%3E");
+      }
+      .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .active-tab {
+        background: linear-gradient(135deg, #6fc4ec, #0284c7);
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="gradient-bg min-h-screen overflow-x-hidden">
+    <!-- Header Section -->
+    <div class="relative min-h-screen flex items-center justify-center moroccan-pattern">
+      <!-- Floating Decorations -->
+      <div class="absolute top-10 left-10 animate-float">
+        <i class="fas fa-star text-white text-2xl opacity-30"></i>
+      </div>
+      <div class="absolute top-20 right-20 animate-float" style="animation-delay: 2s">
+        <i class="fas fa-moon text-white text-3xl opacity-30"></i>
+      </div>
+      <div class="absolute bottom-32 left-20 animate-float" style="animation-delay: 4s">
+        <i class="fas fa-star text-white text-xl opacity-30"></i>
+      </div>
+
+      <!-- Main Card -->
+      <div class="glass-effect rounded-3xl p-8 mx-4 max-w-md w-full shadow-2xl text-center">
+        <!-- Islamic Ornament -->
+        <div class="mb-6">
+          <div class="text-6xl text-sky-700 mb-4">
+            <i class="fas fa-mosque"></i>
+          </div>
+          <div class="text-sky-800 text-sm font-medium">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold text-sky-900 mb-2 text-shadow">Walimatul Khitan</h1>
+        <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full mb-6"></div>
+
+        <!-- Child Info -->
+        <div class="mb-6">
+          <h2 class="text-2xl font-bold text-sky-800 mb-2">Sultan Maulana</h2>
+          <p class="text-sky-700 font-medium">Putra Kesayangan</p>
+          <p class="text-sky-600">Bapak H Alia & Ibu Hj Susi</p>
+        </div>
+
+        <!-- Event Info -->
+        <div class="space-y-3 mb-8">
+          <div class="flex items-center justify-center text-sky-700">
+            <i class="far fa-calendar-alt mr-3 text-sky-500"></i>
+            <span class="font-medium">Sabtu, 20 September 2025</span>
+          </div>
+          <div class="flex items-center justify-center text-sky-700">
+            <i class="far fa-clock mr-3 text-sky-500"></i>
+            <span class="font-medium">08.00 wib s/d Selesai</span>
+          </div>
+          <div class="flex items-center justify-center text-sky-700">
+            <i class="fas fa-map-marker-alt mr-3 text-sky-500"></i>
+            <span class="font-medium">Kp. Pabuaran Rt 001/005 Ds. Tamiang Kec. Gunung Kaler Kab. Tangerang-Banten</span>
+          </div>
+        </div>
+
+        <!-- Opening Message -->
+        <p class="text-sky-700 text-sm leading-relaxed mb-6">
+          "Dengan mengucap syukur atas nikmat Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara syukuran Walimatul Khitan putra kami"
+        </p>
+
+        <!-- Scroll Indicator -->
+        <div class="animate-bounce">
+          <i class="fas fa-chevron-down text-sky-500 text-xl"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="pb-20">
+      <!-- Jadwal Acara Section -->
+      <section id="jadwal" class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-sky-900 text-center mb-12 text-shadow"><i class="far fa-clock mr-3 text-sky-600"></i>Jadwal Acara</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass-effect rounded-2xl p-6 text-center">
+              <div class="text-4xl text-sky-600 mb-4">
+                <i class="fas fa-sun"></i>
+              </div>
+              <h3 class="text-xl font-bold text-sky-800 mb-3">Acara Pagi</h3>
+              <div class="space-y-2 text-sky-700">
+                <p><span class="font-semibold">09.00 - 10.00</span><br />Pembacaan Al-Quran & Doa</p>
+                <p><span class="font-semibold">10.00 - 11.00</span><br />Prosesi Khitan</p>
+                <p><span class="font-semibold">11.00 - 12.00</span><br />Acara Syukuran</p>
+              </div>
+            </div>
+            <div class="glass-effect rounded-2xl p-6 text-center">
+              <div class="text-4xl text-sky-600 mb-4">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h3 class="text-xl font-bold text-sky-800 mb-3">Makan Bersama</h3>
+              <div class="space-y-2 text-sky-700">
+                <p><span class="font-semibold">12.00 - 13.00</span><br />Makan Siang Bersama</p>
+                <p><span class="font-semibold">13.00 - 14.00</span><br />Acara Bebas & Foto Bersama</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="py-16 px-4 bg-white bg-opacity-20">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-sky-900 text-center mb-12 text-shadow"><i class="far fa-images mr-3 text-sky-600"></i>Galeri Foto</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="glass-effect rounded-xl p-4 text-center">
+              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
+                <i class="fas fa-camera text-sky-500 text-3xl"></i>
+              </div>
+              <p class="text-xs text-sky-700">Foto</p>
+            </div>
+            <div class="glass-effect rounded-xl p-4 text-center">
+              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
+                <i class="fas fa-baby text-sky-500 text-3xl"></i>
+              </div>
+              <p class="text-xs text-sky-700">Foto</p>
+            </div>
+            <div class="glass-effect rounded-xl p-4 text-center">
+              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
+                <i class="fas fa-heart text-sky-500 text-3xl"></i>
+              </div>
+              <p class="text-xs text-sky-700">Foto</p>
+            </div>
+            <div class="glass-effect rounded-xl p-4 text-center">
+              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
+                <i class="fas fa-gift text-sky-500 text-3xl"></i>
+              </div>
+              <p class="text-xs text-sky-700">Foto</p>
+            </div>
+            <div class="glass-effect rounded-xl p-4 text-center">
+              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
+                <i class="fas fa-users text-sky-500 text-3xl"></i>
+              </div>
+              <p class="text-xs text-sky-700">Foto</p>
+            </div>
+            <div class="glass-effect rounded-xl p-4 text-center">
+              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
+                <i class="fas fa-mosque text-sky-500 text-3xl"></i>
+              </div>
+              <p class="text-xs text-sky-700">Foto</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lokasi Section -->
+      <section id="lokasi" class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-sky-900 text-center mb-12 text-shadow"><i class="fas fa-map-marker-alt mr-3 text-sky-600"></i>Lokasi Acara</h2>
+          <div class="glass-effect rounded-2xl p-6 text-center">
+            <div class="text-5xl text-sky-600 mb-6 animate-pulse-slow">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-sky-800 mb-4">Rumah Keluarga</h3>
+            <p class="text-sky-700 text-lg mb-6">Kp. Pabuaran Rt 001/005 <br />Kp. Pabuaran Rt 001/005 Ds. Tamiang Kec. Gunung Kaler<br />Kab. Tangerang-Banten</p>
+            <div class="space-y-3">
+              <button class="w-full bg-sky-400 hover:bg-sky-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"><i class="fas fa-directions mr-2"></i>Buka Maps</button>
+              <p class="text-sky-600 text-sm">Klik tombol di atas untuk membuka lokasi di Google Maps</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Doa Section -->
+      <section id="doa" class="py-16 px-4 bg-white bg-opacity-20">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-sky-900 mb-12 text-shadow"><i class="fas fa-hands mr-3 text-sky-600"></i>Doa untuk Anak</h2>
+          <div class="glass-effect rounded-2xl p-8">
+            <div class="text-4xl text-sky-600 mb-6">
+              <i class="fas fa-praying-hands"></i>
+            </div>
+            <div class="text-sky-800 text-xl mb-4 font-arabic leading-relaxed">اَللّٰهُمَّ بَارِكْ لَهُ وَبَارِكْ عَلَيْهِ وَاجْعَلْهُ مِنَ الصَّالِحِيْنَ</div>
+            <p class="text-sky-700 italic mb-6">"Ya Allah, berikanlah keberkahan kepadanya, limpahkan keberkahan atasnya, dan jadikanlah dia termasuk orang-orang yang shaleh"</p>
+            <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Penutup Section -->
+      <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="glass-effect rounded-2xl p-8">
+            <div class="text-4xl text-sky-600 mb-6">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-sky-800 mb-6">Terima Kasih</h2>
+            <p class="text-sky-700 leading-relaxed mb-6">
+              Kehadiran dan doa restu dari Bapak/Ibu/Saudara/i merupakan kebahagian tersendiri bagi keluarga kami. Semoga Allah SWT membalas kebaikan Anda semua.
+            </p>
+            <div class="text-sky-600 font-semibold">Wassalamu'alaikum Warahmatullahi Wabarakatuh</div>
+            <div class="mt-6 text-sky-700">- Keluarga H Alia dan Hj Susi -</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 glass-effect border-t border-sky-200 z-50">
+      <div class="max-w-lg mx-auto">
+        <div class="flex justify-around items-center py-2">
+          <button onclick="scrollToSection('jadwal')" class="nav-btn flex flex-col items-center p-2 rounded-lg transition-all duration-300 hover:bg-sky-200 hover:bg-opacity-50" data-target="jadwal">
+            <i class="far fa-clock text-xl mb-1"></i>
+            <span class="text-xs font-medium">Jadwal</span>
+          </button>
+          <button onclick="scrollToSection('gallery')" class="nav-btn flex flex-col items-center p-2 rounded-lg transition-all duration-300 hover:bg-sky-200 hover:bg-opacity-50" data-target="gallery">
+            <i class="far fa-images text-xl mb-1"></i>
+            <span class="text-xs font-medium">Galeri</span>
+          </button>
+          <button onclick="scrollToSection('lokasi')" class="nav-btn flex flex-col items-center p-2 rounded-lg transition-all duration-300 hover:bg-sky-200 hover:bg-opacity-50" data-target="lokasi">
+            <i class="fas fa-map-marker-alt text-xl mb-1"></i>
+            <span class="text-xs font-medium">Lokasi</span>
+          </button>
+          <button onclick="scrollToSection('doa')" class="nav-btn flex flex-col items-center p-2 rounded-lg transition-all duration-300 hover:bg-sky-200 hover:bg-opacity-50" data-target="doa">
+            <i class="fas fa-hands text-xl mb-1"></i>
+            <span class="text-xs font-medium">Doa</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+
+        // Update active nav state
+        document.querySelectorAll('.nav-btn').forEach((btn) => {
+          btn.classList.remove('active-tab');
+        });
+        document.querySelector(`[data-target="${sectionId}"]`).classList.add('active-tab');
+      }
+
+      // Auto-highlight nav based on scroll position
+      window.addEventListener('scroll', () => {
+        const sections = ['jadwal', 'gallery', 'lokasi', 'doa'];
+        let currentSection = '';
+
+        sections.forEach((section) => {
+          const element = document.getElementById(section);
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            currentSection = section;
+          }
+        });
+
+        if (currentSection) {
+          document.querySelectorAll('.nav-btn').forEach((btn) => {
+            btn.classList.remove('active-tab');
+          });
+          const activeBtn = document.querySelector(`[data-target="${currentSection}"]`);
+          if (activeBtn) {
+            activeBtn.classList.add('active-tab');
+          }
+        }
+      });
+
+      // Add some interactive animations
+      document.addEventListener('DOMContentLoaded', () => {
+        // Add click animation to cards
+        document.querySelectorAll('.glass-effect').forEach((card) => {
+          card.addEventListener('click', function () {
+            this.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+              this.style.transform = 'scale(1)';
+            }, 150);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
