@@ -44,6 +44,40 @@
         background: linear-gradient(135deg, #6fc4ec, #0284c7);
         color: white;
       }
+      .photo-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.75rem;
+        transition: transform 0.3s ease;
+      }
+      .photo-container:hover {
+        transform: scale(1.05);
+      }
+      .photo-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      .photo-container:hover img {
+        transform: scale(1.1);
+      }
+      .photo-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .photo-container:hover .photo-overlay {
+        opacity: 1;
+      }
     </style>
   </head>
   <body class="gradient-bg min-h-screen overflow-x-hidden">
@@ -145,60 +179,114 @@
       <section id="gallery" class="py-16 px-4 bg-white bg-opacity-20">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-3xl font-bold text-sky-900 text-center mb-12 text-shadow"><i class="far fa-images mr-3 text-sky-600"></i>Galeri Foto</h2>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="glass-effect rounded-xl p-4 text-center">
-              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
-                <i class="fas fa-camera text-sky-500 text-3xl"></i>
+          
+          <!-- Instruksi untuk menambah foto
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-8 rounded">
+            <p class="text-yellow-700 text-sm">
+              <i class="fas fa-info-circle mr-2"></i>
+              <strong>Cara menambah foto:</strong> Ganti URL di bawah dengan path foto Anda. Contoh: "foto/sultan1.jpg", "foto/sultan2.jpg", dst.
+            </p>
+          </div> -->
+
+          <!-- <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Foto 1 - Ganti src dengan path foto asli -->
+            <div class="photo-container aspect-square">
+              <img src="./images/1.webp" alt="Sultan Maulana - Foto 1" />
+              <div class="photo-overlay">
+                <i class="fas fa-search-plus text-white text-2xl"></i>
               </div>
-              <p class="text-xs text-sky-700">Foto</p>
             </div>
-            <div class="glass-effect rounded-xl p-4 text-center">
-              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
-                <i class="fas fa-baby text-sky-500 text-3xl"></i>
+            
+            <!-- Foto 2 -->
+            <div class="photo-container aspect-square">
+              <img src="./images/1.webp" alt="Sultan Maulana - Foto 2" />
+              <div class="photo-overlay">
+                <i class="fas fa-search-plus text-white text-2xl"></i>
               </div>
-              <p class="text-xs text-sky-700">Foto</p>
             </div>
-            <div class="glass-effect rounded-xl p-4 text-center">
-              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
-                <i class="fas fa-heart text-sky-500 text-3xl"></i>
+            
+            <!-- Foto 3 -->
+            <div class="photo-container aspect-square">
+              <img src="./images/1.webp" alt="Sultan Maulana - Foto 3" />
+              <div class="photo-overlay">
+                <i class="fas fa-search-plus text-white text-2xl"></i>
               </div>
-              <p class="text-xs text-sky-700">Foto</p>
             </div>
-            <div class="glass-effect rounded-xl p-4 text-center">
-              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
-                <i class="fas fa-gift text-sky-500 text-3xl"></i>
+            
+            <!-- Foto 4 -->
+            <div class="photo-container aspect-square">
+              <img src="./images/omg.jpg" alt="Sultan Maulana - Foto 4" />
+              <div class="photo-overlay">
+                <i class="fas fa-search-plus text-white text-2xl"></i>
               </div>
-              <p class="text-xs text-sky-700">Foto</p>
             </div>
-            <div class="glass-effect rounded-xl p-4 text-center">
-              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
-                <i class="fas fa-users text-sky-500 text-3xl"></i>
+            
+            <!-- Foto 5 -->
+            <div class="photo-container aspect-square">
+              <img src="./images/omg.jpg" alt="Sultan Maulana - Foto 5" />
+              <div class="photo-overlay">
+                <i class="fas fa-search-plus text-white text-2xl"></i>
               </div>
-              <p class="text-xs text-sky-700">Foto</p>
             </div>
-            <div class="glass-effect rounded-xl p-4 text-center">
-              <div class="aspect-square bg-sky-200 rounded-lg flex items-center justify-center mb-2">
-                <i class="fas fa-mosque text-sky-500 text-3xl"></i>
+            
+            <!-- Foto 6 -->
+            <div class="photo-container aspect-square">
+              <img src="./images/omg.jpg" alt="Sultan Maulana - Foto 6" />
+              <div class="photo-overlay">
+                <i class="fas fa-search-plus text-white text-2xl"></i>
               </div>
-              <p class="text-xs text-sky-700">Foto</p>
             </div>
+            
+            <!-- Foto 7
+            <div class="photo-container aspect-square">
+              <img src="https://via.placeholder.com/300x300/87CEEB/ffffff?text=Foto+7" alt="Sultan Maulana - Foto 7" />
+              <div class="photo-overlay">
+                <i class="fas fa-search-plus text-white text-2xl"></i>
+              </div>
+            </div>
+
           </div>
-        </div>
+          
+          <!-- Tombol untuk menambah lebih banyak foto -->
+          <div class="text-center mt-8">
+            <button class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300">
+              <i class="fas  mr-2"></i>Sulthan Maulana
+            </button>
+          </div>
+        </div> -->
       </section>
 
       <!-- Lokasi Section -->
       <section id="lokasi" class="py-16 px-4">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-3xl font-bold text-sky-900 text-center mb-12 text-shadow"><i class="fas fa-map-marker-alt mr-3 text-sky-600"></i>Lokasi Acara</h2>
+          
+          <!-- Instruksi untuk maps -->
+          <!-- <div class="bg-blue-100 border-l-4 border-blue-500 p-4 mb-8 rounded">
+            <p class="text-blue-700 text-sm">
+              <i class="fas fa-info-circle mr-2"></i>
+              <strong>Cara mengganti link maps:</strong> Ganti variabel 'mapsURL' di JavaScript dengan link Google Maps yang sebenarnya.
+            </p>
+          </div> -->
+
           <div class="glass-effect rounded-2xl p-6 text-center">
             <div class="text-5xl text-sky-600 mb-6 animate-pulse-slow">
               <i class="fas fa-home"></i>
             </div>
             <h3 class="text-2xl font-bold text-sky-800 mb-4">Rumah Keluarga</h3>
-            <p class="text-sky-700 text-lg mb-6">Kp. Pabuaran Rt 001/005 <br />Kp. Pabuaran Rt 001/005 Ds. Tamiang Kec. Gunung Kaler<br />Kab. Tangerang-Banten</p>
+            <p class="text-sky-700 text-lg mb-6">
+              Kp. Pabuaran Rt 001/005<br />
+              Ds. Tamiang Kec. Gunung Kaler<br />
+              Kab. Tangerang-Banten
+            </p>
             <div class="space-y-3">
-              <button class="w-full bg-sky-400 hover:bg-sky-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"><i class="fas fa-directions mr-2"></i>Buka Maps</button>
-              <p class="text-sky-600 text-sm">Klik tombol di atas untuk membuka lokasi di Google Maps</p>
+              <button 
+                id="mapsButton" 
+                class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105"
+              >
+                <i class="fas fa-directions mr-2"></i>Buka di Google Maps
+              </button>
+              <p class="text-sky-600 text-sm">Klik tombol di atas untuk membuka lokasi di Google Maps atau membagikannya</p>
             </div>
           </div>
         </div>
@@ -262,6 +350,37 @@
     </nav>
 
     <script>
+      // ==========================================
+      // GANTI LINK GOOGLE MAPS DI SINI
+      // ==========================================
+      const mapsURL = 'https://maps.google.com/?q=Kp.+Pabuaran+Rt+001/005+Ds.+Tamiang+Kec.+Gunung+Kaler+Kab.+Tangerang+Banten';
+      // Contoh link yang benar:
+      // const mapsURL = 'https://maps.google.com/?q=-6.2088,106.8456';
+      // atau
+      // const mapsURL = 'https://goo.gl/maps/yourMapLink';
+
+      // Event listener untuk tombol maps
+      document.getElementById('mapsButton').addEventListener('click', function() {
+        window.open(mapsURL, '_blank');
+      });
+
+      // Fungsi untuk membagikan lokasi
+      function shareLocation() {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Lokasi Walimatul Khitan Sultan Maulana',
+            text: 'Lokasi acara Walimatul Khitan Sultan Maulana',
+            url: mapsURL
+          });
+        } else {
+          // Fallback untuk browser yang tidak support Web Share API
+          navigator.clipboard.writeText(mapsURL).then(function() {
+            alert('Link lokasi telah disalin ke clipboard!');
+          });
+        }
+      }
+
+      // Fungsi scroll ke section
       function scrollToSection(sectionId) {
         const element = document.getElementById(sectionId);
         element.scrollIntoView({
@@ -304,11 +423,19 @@
       document.addEventListener('DOMContentLoaded', () => {
         // Add click animation to cards
         document.querySelectorAll('.glass-effect').forEach((card) => {
-          card.addEventListener('click', function () {
+          card.addEventListener('click', function() {
             this.style.transform = 'scale(0.98)';
             setTimeout(() => {
               this.style.transform = 'scale(1)';
             }, 150);
+          });
+        });
+
+        // Add click animation to photo containers
+        document.querySelectorAll('.photo-container').forEach((photo) => {
+          photo.addEventListener('click', function() {
+            // Bisa ditambahkan modal atau lightbox di sini
+            console.log('Photo clicked:', this.querySelector('img').alt);
           });
         });
       });
